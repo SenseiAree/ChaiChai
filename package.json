@@ -1,0 +1,24 @@
+{
+  "name": "chaichai",
+  "version": "1.0.0",
+  "description": "A Full Stack Web Application which enables a tea shop",
+  "main": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "keywords": [
+    "chaichai",
+    "chai",
+    "fullstack",
+    "angular",
+    "express"
+  ],
+  "author": "Areetra Halder",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.6",
+    "nodemon": "^3.0.3",
+    "ts-node": "^10.9.2"
+  }
+}
