@@ -2,10 +2,10 @@
   "name": "chaichai",
   "version": "1.0.0",
   "description": "A Full Stack Web Application which enables a tea shop",
-  "main": "index.mjs",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
   "keywords": [
     "chaichai",
@@ -17,9 +17,12 @@
   "author": "Areetra Halder",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.11.6",
     "nodemon": "^3.0.3",
-    "prettier": "^3.2.4",
-    "ts-node": "^10.9.2"
+    "prettier": "^3.2.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.1.1"
   }
 }
