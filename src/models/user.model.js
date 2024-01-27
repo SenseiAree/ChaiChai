@@ -3,6 +3,7 @@ import { addressSchema } from "./customSchemas/address.schema.js";
 import { contactSchema } from "./customSchemas/contact.schema.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
+import { userTypes, genders } from "../constants.js";
 
 const userSchema = new mongoose.Schema(
   {
@@ -16,18 +17,18 @@ const userSchema = new mongoose.Schema(
     },
     fullName: {
       type: String,
-      required: [true, "Name is required."],
+      required: [true, "Full Name of the user is required."],
       trim: true,
       index: true,
     },
     emailId: {
       type: String,
-      required: [true, "Email Id is required"],
+      required: [true, "Email Id of the user is required"],
       lowercase: true,
       trim: true,
       unique: true,
     },
-    password: { type: String, required: [true, "Password is required."] },
+    password: { type: String, required: [true, "Password of the user is required."] },
     contactInfo: { type: [contactSchema], default: [] },
     addresses: { type: [addressSchema], default: [] },
     displayPicture: {
@@ -38,13 +39,13 @@ const userSchema = new mongoose.Schema(
     },
     userType: {
       type: String,
-      enum: ["Customer", "Employee"],
-      default: "Customer",
+      enum: userTypes,
+      default: userTypes[0],
     },
     gender: {
       type: String,
-      enum: ["Male", "Female"],
-      default: "Male",
+      enum: genders,
+      default: genders[0],
     },
     refreshToken: { type: String },
   },
