@@ -20,10 +20,13 @@ const productSchema = new Schema(
       type: String,
       required: [true, "Name of the product is required."],
       unique: true,
+      trim: true,
+      index: true
     },
     description: {
       type: String,
       required: [true, "Description of the product is required."],
+      trim: true,
     },
     price: {
       type: Number,
@@ -36,3 +39,5 @@ const productSchema = new Schema(
   },
   { timestamps: true }
 );
+
+export const Product = model("Product", productSchema);

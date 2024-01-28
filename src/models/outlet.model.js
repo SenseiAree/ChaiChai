@@ -6,6 +6,8 @@ const outletSchema = new Schema(
     outletName: {
       type: String,
       required: [true, "Outlet name is required."],
+      trim: true,
+      index: true
     },
     address: {
       type: addressSchema,

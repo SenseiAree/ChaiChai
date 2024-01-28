@@ -27,8 +27,12 @@ const userSchema = new mongoose.Schema(
       lowercase: true,
       trim: true,
       unique: true,
+      match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, "Email Id of the user in invalid"]
     },
-    password: { type: String, required: [true, "Password of the user is required."] },
+    password: {
+      type: String,
+      required: [true, "Password of the user is required."],
+    },
     contactInfo: { type: [contactSchema], default: [] },
     addresses: { type: [addressSchema], default: [] },
     displayPicture: {

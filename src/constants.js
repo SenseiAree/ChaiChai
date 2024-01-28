@@ -1,8 +1,10 @@
 export const DB_NAME = "chaichaidb";
 export const jsonLimit = "16kb";
 export const urlencodedLimit = "16kb";
-export const genders = ["Male", "Female"]
-export const userTypes = ["Customer", "Employee"]
+export const genders = ["Male", "Female"];
+export const userTypes = ["Customer", "Employee"];
+export const discountTypes = ["Percentage", "Amount"];
+export const orderStatuses = ["Pending", "Cancelled", "Out for Delivery", "Delivered"]
 export const country_list = [
   "Afghanistan",
   "Albania",
